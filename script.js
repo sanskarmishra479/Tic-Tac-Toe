@@ -24,6 +24,7 @@ Boxes.forEach((box) =>{
           }
           box.disabled = true;
           checkWinner();
+          checkDraw();
     });
 });
 Btn.addEventListener("click", () =>{
@@ -37,11 +38,25 @@ const checkWinner = () =>{
 
     if(val1 != "" && val2 != "" && val3 != ""){
       if(val1===val2 && val2 ===val3){
-        playerTurn.textContent = `The Winnwr is ${val1}`;
+        playerTurn.innerText = `The Winnwr is ${val1}`;
         Boxes.forEach((box) =>{
           box.disabled = true;
         })
       }
     }
+  }
+};
+const checkDraw = () => {
+  let allFilled = true;
+  Boxes.forEach(box => {
+      if (box.innerText === "") {
+          allFilled = false;
+      }
+  });
+  if (allFilled) {
+      playerTurn.innerText = "It's a Draw!";
+      Boxes.forEach(box => {
+          box.disabled = true;
+      });
   }
 };
