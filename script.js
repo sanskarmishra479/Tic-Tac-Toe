@@ -16,15 +16,14 @@ Boxes.forEach((box) =>{
         if (turnX) {
             box.innerText = "X";
             turnX = false;
-            playerTurn.textContent = "Now it's Player O's turn!";
+            playerTurn.innerText = "Now it's Player O's turn!";
           } else {
             box.innerText = "O";
             turnX = true;
-            playerTurn.textContent = "Now it's Player X's turn!";
+            playerTurn.innerText = "Now it's Player X's turn!";
           }
           box.disabled = true;
           checkWinner();
-
     });
 });
 Btn.addEventListener("click", () =>{
