@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:Helvetica;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #fffef9;
+}
+#nav{
+    height: 10%;
+    width: 100%;
+    background-color: #bde0fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hero{
+    height: 70%;
+    width: 100%;
+    display: inline grid;
+    align-items: center;
+    justify-content: center;
+}
+#board{
+    height: 320px;
+    width: 320px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3,100px);
+}
+#cell{
+    height: 90px;
+    width: 90px;
+    background-color: rgb(237, 237, 237);
+    border: 1px solid rgb(131, 131, 131);
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px black;
+    font-size: 40px;
+    color: black;
+}
+#restartBtn{
+    border: 1px solid black;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+#restartBtn:hover{
+    background-color: rgb(55, 55, 55);
+}
+#playerTurn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
